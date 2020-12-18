@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>MIKKY KI</title>
+    <link href="index.css" rel="stylesheet" media="all">
+    <link href="reset/reset.css" rel="stylesheet" media="all">
+    <script src="js/lazysizes.min.js" async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="cookies" id="cookies">
+    <p>This website uses <a href="privacy-statement/">cookies</a>.</p>
+    <div class="close">Close<div></div></div>
+    <script>
+        //Сверить значение ответа с куки
+    </script>
+</div>
+
+<div class="cart" id="cart">
+    <div class="bg" onclick="cartClose()"></div>
+    <div class="main-block">
+        <div class="close" onclick="cartClose()">
+            <img src="img/header/close.svg">
+        </div>
+        <p class="head">Shopping cart</p>
+        <p class="pure-cart" id="pure-cart" style="display: none">You have no items in your shipping cart</p>
+        <div class="content">
+            <div class="box">
+                <img src="img/cart/1.jpg">
+                <div class="cont">
+                    <div class="line l1">
+                        <a href="#">Brush hoodie back | white fire</a>
+                        <div class="img"><img src="img/cart/delete.svg"></div>
+                    </div>
+                    <div class="line l2">
+                        <p>M</p>
+                    </div>
+                    <div class="line l3">
+                        <a href="shopping-cart/" class="q">Quantity: 1</a>
+                        <div class="price">€ 110,00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/cart/2.jpg">
+                <div class="cont">
+                    <div class="line l1">
+                        <a href="#">MIKKY KI. phone case | turquoise</a>
+                        <div class="img"><img src="img/cart/delete.svg"></div>
+                    </div>
+                    <div class="line l2">
+                        <p>iPhone XR</p>
+                    </div>
+                    <div class="line l3">
+                        <a href="shopping-cart/" class="q">Quantity: 1</a>
+                        <div class="price">€ 25,00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/cart/1.jpg">
+                <div class="cont">
+                    <div class="line l1">
+                        <a href="#">Brush hoodie back | white fire</a>
+                        <div class="img"><img src="img/cart/delete.svg"></div>
+                    </div>
+                    <div class="line l2">
+                        <p>M</p>
+                    </div>
+                    <div class="line l3">
+                        <a href="shopping-cart/" class="q">Quantity: 1</a>
+                        <div class="price">€ 110,00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/cart/2.jpg">
+                <div class="cont">
+                    <div class="line l1">
+                        <a href="#">MIKKY KI. phone case | turquoise</a>
+                        <div class="img"><img src="img/cart/delete.svg"></div>
+                    </div>
+                    <div class="line l2">
+                        <p>iPhone XR</p>
+                    </div>
+                    <div class="line l3">
+                        <a href="shopping-cart/" class="q">Quantity: 1</a>
+                        <div class="price">€ 25,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total">
+                <div class="line">
+                    <p>Subtotal</p>
+                    <span>€ 135,00</span>
+                </div>
+                <div class="btn">Checkout</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function cartClose(){
+            document.getElementById('cart').classList.remove('vis');
+            document.getElementsByTagName('body')[0].style.overflowY="auto";
+        }
+    </script>
+</div>
+
+<div class="menu" id="menu">
+    <div class="bg" onclick="menuClose()"></div>
+    <div class="main-menu-block">
+        <div class="close" onclick="menuClose()">
+            <img src="img/header/close.svg">
+        </div>
+        <ul class="menu-block-1">
+            <li><a href="#" class="active">Clothing</a></li>
+            <li><a href="#">T-Shirts</a></li>
+            <li class="small"><a href="#" class="small-list"> - Regular fit</a></li>
+            <li class="small"><a href="#" class="small-list"> - Loose fit</a></li>
+            <li><a href="#">Hoodies</a></li>
+            <li><a href="#">Sweaters</a></li>
+            <li><a href="#">Trousers</a></li>
+            <li><a href="#">Phone Cases</a></li>
+            <li><a href="#">Headwear</a></li>
+            <li><a href="#">Look Book</a></li>
+            <li class="social">
+                <ul class="social">
+                    <li><img src="img/header/instagram.svg"></li>
+                    <li><img src="img/header/email.svg"></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-block-2">
+            <img src="img/header/planet-earth.svg" onclick="chooseLangMenu()" id="check-img">
+            <p class="now" onclick="chooseLangMenu()">English</p>
+            <img class="i2" src="img/header/down-arrow.svg" onclick="chooseLangMenu()">
+            <div class="lang" id="lang-small">
+                <p class="part-1">Choose you language</p>
+                <ul class="choose">
+                    <li class="selected"><a href="#">English</a></li>
+                    <li><a href="#">Catala</a></li>
+                    <li><a href="#">Nederlands</a></li>
+                </ul>
+            </div>
+            <script>
+                var checkOpenSmallMenu = 0;
+                    function chooseLangMenu(){
+                        document.getElementById('lang-small').classList.toggle('vis');
+                        if (checkOpenSmallMenu == 0){
+                            checkOpenSmallMenu = 1;
+                            if(document.documentElement.clientHeight - document.getElementById('check-img').getBoundingClientRect().bottom > 170){
+                                document.getElementById('lang-small').classList.add('bottom');
+                                document.getElementById('lang-small').classList.remove('top');
+                            } else {
+                                document.getElementById('lang-small').classList.remove('bottom');
+                                document.getElementById('lang-small').classList.add('top');
+                            }
+                            console.log(document.documentElement.clientHeight);
+                        } else {
+                            document.getElementById('lang-small').classList.remove('top');
+                            document.getElementById('lang-small').classList.remove('bottom');
+                            checkOpenSmallMenu = 0;
+                            console.log('Close');
+                        }
+                    }
+                window.addEventListener(`resize`, event => {
+                    if (checkOpenSmallMenu == 1){
+                            if(document.documentElement.clientHeight - document.getElementById('check-img').getBoundingClientRect().bottom > 170){
+                                document.getElementById('lang-small').classList.add('bottom');
+                                document.getElementById('lang-small').classList.remove('top');
+                            } else {
+                                document.getElementById('lang-small').classList.remove('bottom');
+                                document.getElementById('lang-small').classList.add('top');
+                            }
+                        }
+                }, false);
+            </script>
+        </div>
+    </div>
+    <script>
+        function menuClose(){
+            document.getElementById('menu').classList.remove('vis');
+            document.getElementsByTagName('body')[0].style.overflowY="auto";
+        }
+    </script>
+</div>
+
+<header>
+
+        <div class="container">
+            <img src="img/mikkyki.svg" id="header-img">
+            <ul class="big-links">
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Hoodies</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Trousers</a></li>
+                <li><a href="#">Phone Cases</a></li>
+                <li><a href="#">Headwear</a></li>
+                <li><a href="#">Look Book</a></li>
+            </ul>
+            <div class="nav">
+                <div class="menu-block-2">
+                    <img src="img/header/planet-earth-header.svg" onclick="chooseLangHeader()" id="check-img">
+                    <p class="now" onclick="chooseLangHeader()">English</p>
+                    <img class="i2-header" src="img/header/down-arrow-header.svg" onclick="chooseLangHeader()">
+                    <div class="lang" id="lang-header">
+                        <p class="part-1">Choose you language</p>
+                        <ul class="choose">
+                            <li class="selected"><a href="#">English</a></li>
+                            <li><a href="#">Catala</a></li>
+                            <li><a href="#">Nederlands</a></li>
+                        </ul>
+                    </div>
+                    <script>
+                            function chooseLangHeader(){
+                                document.getElementById('lang-header').classList.toggle('vis');
+                                document.getElementById('lang-header').classList.toggle('bottom');
+                            }
+                    </script>
+                </div>
+                <a href="#" class="profile"><img src="img/header/profile-user.svg"></a>
+                <a href="#" class="search"><img src="img/header/magnifying-glass.svg"></a>
+                <div class="cart" onclick="cartOpen()"><img src="img/header/shopping-bag.svg"><span>0</span></div>
+                <div class="menu" onclick="menuOpen()">
+                    <span></span>
+                </div>
+            </div>
+
+        </div>
+
+    <script>
+            window.addEventListener('scroll', function() {
+                if (pageYOffset > document.documentElement.clientHeight/3){
+                    document.getElementById('header-img').classList.add('small');
+                } else {
+                    document.getElementById('header-img').classList.remove('small');
+                }
+            });
+
+        function menuOpen(){
+            document.getElementById('menu').classList.add('vis');
+            document.getElementsByTagName('body')[0].style.overflow="hidden";
+        }
+        function cartOpen(){
+            document.getElementById('cart').classList.add('vis');
+            document.getElementsByTagName('body')[0].style.overflow="hidden";
+        }
+    </script>
+
+    </header>
+
+<div class="block-1">
+    <div class="position-relative">
+
+       <picture class="img-back land">
+            <source media="(max-width: 600px)" data-srcset="/img/main/1-7-2231-slide-b_w600.jpg">
+            <source media="(min-width: 600px) and (max-width: 900px)" data-srcset="/img/main/1-7-2231-slide-b_w1100.jpg">
+            <source media="(min-width: 900px) and (max-width: 1100px)" data-srcset="/img/main/1-7-2231-slide-b_w1600.jpg">
+            <source media="(min-width: 1100px) and (max-width: 1600px)" data-srcset="/img/main/1-7-2231-slide-b_w1920.jpg">
+            <source media="(min-width: 1600px) and (max-width: 1920px)" data-srcset="/img/main/1-7-2231-slide-b_w2400.jpg">
+            <source media="(min-width: 1920px) and (max-width: 2400px)" data-srcset="/img/main/1-7-2231-slide-b_w2800.jpg">
+            <source media="(min-width: 2400px)" data-srcset="/img/main/1-7-2231-slide-b_w2800.jpg">
+            <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            class="lazyload"
+            alt=""/>
+        </picture>
+        <picture class="img-back port">
+            <source media="(max-width: 600px)" data-srcset="/img/main/1-7-1823-slide-b_w600.jpg">
+            <source media="(min-width: 600px) and (max-width: 900px)" data-srcset="/img/main/1-7-1823-slide-b_w900.jpg">
+            <source media="(min-width: 900px) and (max-width: 1100px)" data-srcset="/img/main/1-7-1823-slide-b_w1100.jpg">
+            <source media="(min-width: 1100px) and (max-width: 1600px)" data-srcset="/img/main/1-7-1823-slide-b_w1600.jpg">
+            <source media="(min-width: 1600px)" data-srcset="/img/main/1-7-1823-slide-b_w1920.jpg">
+            <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            class="lazyload"
+            alt=""/>
+        </picture>
+    </div>
+    <div class="btn">Shop the collection</div>
+</div>
+<div class="block-2">
+    <a href="#" class="box-1">
+        <picture>
+            <source media="(max-width: 600px)" data-srcset="/img/main/1-17-1806-slide_w600.jpg">
+            <source media="(min-width: 600px)" data-srcset="/img/main/1-17-1806-slide_w900.jpg">
+            <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            class="lazyload"
+            alt=""/>
+        </picture>
+        <p>Hoodies</p>
+        <div class="bg"></div>
+    </a>
+    <a href="#" class="box-2">
+        <picture>
+            <source media="(max-width: 600px)" data-srcset="/img/main/1-17-1808-slide_w600.jpg">
+            <source media="(min-width: 600px)" data-srcset="/img/main/1-17-1808-slide_w900.jpg">
+            <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            class="lazyload"
+            alt=""/>
+        </picture>
+        <p>T-Shirt</p>
+        <div class="bg"></div>
+    </a>
+    <a href="#" class="box-3">
+        <picture>
+            <source media="(max-width: 600px)" data-srcset="/img/main/1-17-880-slide_w600.jpg">
+            <source media="(min-width: 600px)" data-srcset="/img/main/1-17-880-slide_w900.jpg">
+            <img
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            class="lazyload"
+            alt=""/>
+        </picture>
+        <p>Phone Cases</p>
+        <div class="bg"></div>
+    </a>
+</div>
+
+<footer class="footer">
+    <div class="block">
+        <div class="col c1">
+
+            <ul class="links">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping & returns</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+            <ul class="social s1">
+                <li><img src="img/instagram.svg"></li>
+                <li><img src="img/email.svg"></li>
+            </ul>
+
+        </div>
+        <div class="col c2">
+            <ul class="links">
+                <li><a href="/clothing/t-shirts/" title="T-shirts">T-shirts</a></li>
+                <li><a href="/clothing/hoodies/" title="Hoodies">Hoodies</a></li>
+                <li><a href="/clothing/sweaters/" title="Sweaters">Sweaters</a></li>
+                <li><a href="/clothing/trousers/" title="Trousers">Trousers</a></li>
+                <li><a href="/clothing/phone-cases/" title="Phone cases">Phone cases</a></li>
+                <li><a href="/clothing/headwear/" title="Headwear">Headwear</a></li>
+            </ul>
+        </div>
+        <div class="col c5">
+            <h1>CONNECT WITH MIKKY KI.</h1>
+            <p>Be the first to know about our newest items and best offers.</p>
+            <form>
+                <input type="email" placeholder="YOUR EMAIL">
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+        <div class="col c3">
+            <h1>Payment methdos</h1>
+            <img class="i1" src="img/payment-options-en.jpg">
+            <ul class="social s2">
+                <li><img src="img/instagram.svg"></li>
+                <li><img src="img/email.svg"></li>
+            </ul>
+        </div>
+        <div class="col c4">
+            <h1>CONNECT WITH MIKKY KI.</h1>
+            <p>Be the first to know about our newest items and best offers.</p>
+            <form>
+                <input type="email" placeholder="YOUR EMAIL">
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+    </div>
+    <div class="block-2">
+        <ul>
+            <li>© MIKKY KI. ALL RIGHTS RESERVED</li>
+            <li><a href="/privacy-statement/">Privacy statement</a></li>
+            <li><a href="/disclaimer/">Disclamer</a></li>
+            <li><a href="/terms-conditions/">Terms & Condition</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
